@@ -1,15 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Any
-from homeassistant.core import HomeAssistant
+from .extension import Extension
 
-
-class GeneratorExtension(ABC):
-
-    _hass: HomeAssistant
-
-    def __init__(self, hass: HomeAssistant):
-        self._hass = hass
-
+class GeneratorExtension(Extension, ABC):
     @abstractmethod
     def init(self) -> None:
         """
