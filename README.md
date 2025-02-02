@@ -5,4 +5,4 @@ This package contains abstract base classes to be used for creating template ext
 ## Installation
 
 ```bash
-pip install pip install git+https://github.com/pbergman/lovelace-exend.git#egg=lovelace_extend
+pip install pip install git+https://github.com/pbergman/lovelace-extend.git#egg=lovelace_extend
