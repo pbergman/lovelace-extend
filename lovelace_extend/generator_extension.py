@@ -5,12 +5,6 @@ from .abstract_extension import Extension
 
 class GeneratorExtension(Extension, ABC):
     @abstractmethod
-    def init(self) -> None:
-        """
-        will be run once when after initializing class
-        """
-
-    @abstractmethod
     def get_config(self) -> Dict[str, Any]:
         """
         config registering dashboard, see DASHBOARD_BASE_CREATE_FIELDS
