@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Callable
-from .abstract_extension import Extension
+from .template_extension import TemplateExtension
 
-class TestExtension(Extension, ABC):
+
+class TestExtension(TemplateExtension, ABC):
 
     @abstractmethod
     def tests(self) -> Dict[str, Callable[..., bool]]:

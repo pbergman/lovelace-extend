@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Dict, Any
 from .abstract_extension import Extension
 
+
 class GeneratorExtension(Extension, ABC):
     @abstractmethod
     def init(self) -> None:

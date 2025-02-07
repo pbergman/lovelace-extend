@@ -1,6 +1,7 @@
 from abc import ABC
 from .abstract_extension import Extension
 
+
 class TemplateExtension(Extension, ABC):
     def supports(self, environment: str) -> bool:
         """
