@@ -5,7 +5,7 @@ from .abstract_extension import Extension
 
 class GeneratorExtension(Extension, ABC):
     @abstractmethod
-    def get_config(self, force: bool = False) -> Dict[str, Any]:
+    def get_config(self) -> Dict[str, Any]:
         """
         config registering dashboard, see DASHBOARD_BASE_CREATE_FIELDS
         in homeassistant.components.lovelace.const
@@ -18,7 +18,7 @@ class GeneratorExtension(Extension, ABC):
         """
 
     @abstractmethod
-    async def async_generate(self) -> Dict[str, Any]:
+    async def async_generate(self, force: bool = False) -> Dict[str, Any]:
         """
         Build config dict.
         """
