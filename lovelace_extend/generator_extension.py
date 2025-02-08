@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Any
 from .abstract_extension import Extension
+from orjson import Fragment
 
 
 class GeneratorExtension(Extension, ABC):
@@ -18,7 +19,13 @@ class GeneratorExtension(Extension, ABC):
         """
 
     @abstractmethod
-    async def async_generate(self, force: bool = False) -> Dict[str, Any]:
+    async def async_load(self, force: bool) -> dict[str, Any]:
         """
-        Build config dict.
+        Get Config
+        """
+
+    @abstractmethod
+    async def async_json(self, force: bool) -> Fragment:
+        """
+        Get config in json
         """
